@@ -1,4 +1,4 @@
-package com.example.logistics.model.entity
+package com.example.logistics.model
 
 import jakarta.persistence.*
 
@@ -7,14 +7,14 @@ import jakarta.persistence.*
 data class Customer(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    val id: Long = 0,
+    var id: Long? = null,
 
-    @Column(name = "customer_name", nullable = false)
+    @Column(name = "customer_name")
     val customerName: String,
 
-    @Column(name = "customer_phone", nullable = false)
-    val customerPhone: String,
+    @Column(name = "customer_phone")
+    val customerPhone: String? = null,
 
-    @Column(name = "password", nullable = false)
-    val password: String
+    @Column(name = "password")
+    val password: String? = null
 )

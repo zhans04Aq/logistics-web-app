@@ -1,4 +1,7 @@
 package com.example.logistics.model.request
 
-class RegisterRequest {
-}
+data class RegisterRequest(
+    val password: String,
+    val customerName: String,
+    val customerPhone: String
+)

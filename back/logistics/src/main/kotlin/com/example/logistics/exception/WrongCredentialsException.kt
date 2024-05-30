@@ -1,4 +1,3 @@
 package com.example.logistics.exception
 
-class WrongCredentialsException {
-}
+class WrongCredentialsException : RuntimeException ("Password abd")

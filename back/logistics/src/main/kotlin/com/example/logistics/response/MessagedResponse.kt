@@ -1,4 +1,4 @@
-package kz.enactus.ecoalmaty.api.model.response
+package com.example.logistics.response
 
 class MessagedResponse<T>(
     val body: T? = null,

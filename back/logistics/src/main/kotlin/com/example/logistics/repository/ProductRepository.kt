@@ -1,4 +1,8 @@
 package com.example.logistics.repository
 
-interface ProductRepository {
+import com.example.logistics.model.Product
+import org.springframework.data.jpa.repository.JpaRepository
+
+interface ProductRepository : JpaRepository<Product, Long> {
+
 }

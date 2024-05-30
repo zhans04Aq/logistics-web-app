@@ -1,4 +1,4 @@
-package com.example.logistics.model.entity
+package com.example.logistics.model
 
 import jakarta.persistence.*
 

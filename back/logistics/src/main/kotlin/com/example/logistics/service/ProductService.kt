@@ -1,4 +1,11 @@
 package com.example.logistics.service
 
-class ProductService {
+import com.example.logistics.repository.ProductRepository
+import org.springframework.stereotype.Service
+
+@Service
+class ProductService(
+    private val productRepository: ProductRepository
+) {
+
 }

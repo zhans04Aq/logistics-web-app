@@ -1,4 +1,7 @@
 package com.example.logistics.model.request
 
-class LoginRequest {
-}
+
+data class LoginRequest(
+    val customerName: String,
+    val password: String
+)
