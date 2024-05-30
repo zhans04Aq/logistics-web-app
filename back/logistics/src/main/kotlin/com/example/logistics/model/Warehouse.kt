@@ -1,4 +1,4 @@
-package com.example.logistics.entity
+package com.example.logistics.model.entity
 
 import jakarta.persistence.*
 
@@ -13,8 +13,5 @@ data class Warehouse(
     val warehouseName: String,
 
     @Column(name = "warehouse_address", nullable = false)
-    val warehouseAddress: String,
-
-    @OneToMany(mappedBy = "warehouse")
-    val orders: List<Order> = mutableListOf()
+    val warehouseAddress: String
 )

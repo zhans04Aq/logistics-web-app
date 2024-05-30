@@ -1,4 +1,4 @@
-package com.example.logistics.entity
+package com.example.logistics.model.entity
 
 import jakarta.persistence.*
 import java.time.LocalDate
@@ -13,9 +13,12 @@ data class News(
     @Column(name = "news_title", nullable = false)
     val newsTitle: String,
 
-    @Column(name = "news_content", nullable = false)
+    @Column(name = "news_content", nullable = false, columnDefinition = "TEXT")
     val newsContent: String,
 
     @Column(name = "news_date", nullable = false)
-    val newsDate: LocalDate
+    val newsDate: LocalDate,
+
+    @Column(name = "image_path", nullable = false)
+    val imagePath: String
 )
