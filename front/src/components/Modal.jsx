@@ -35,7 +35,7 @@ const ModalLogin = ({ loginModalState, loginModalFunc}) => {
                     <motion.div
                         variants={modalAnimSttgs}
                         initial = "initial" animate = "animate" exit="exit"
-                        className="fixed lg:w-1/4 lg:h-2/4 w-full h-screen bg-white rounded-xl z-20 right-0 lg:left-2/4 origin-right lg:origin-center border top-0">
+                        className="fixed lg:w-1/4 lg:h-2/4 w-full h-screen bg-white rounded-xl z-20 right-0 lg:left-2/4 origin-right lg:origin-center border ">
                         <div className="flex flex-col p-10">
                             <IoIosClose className="self-end" size={40} onClick={()=>loginModalFunc()}/>
                         </div>
@@ -54,9 +54,9 @@ const ModalRegister = ({ regModalState,regModalFunc }) => {
                     <motion.div
                     variants={modalAnimSttgs}
                     initial = "initial" animate = "animate" exit="exit"
-                    className="fixed lg:w-1/4 lg:h-2/4 w-full h-screen bg-white rounded-xl z-20 top-0 right-0 lg:left-2/4 origin-right lg:origin-center border">
+                    className="fixed lg:w-1/4 lg:h-2/4 w-full h-screen bg-white rounded-xl z-20 right-0 lg:left-2/4 origin-right lg:origin-center border">
                         <div className="flex flex-col p-10">
-                            <IoIosClose className="self-end" size={40} onClick={()=>regModalFunc()}/>
+                            <IoIosClose className="self-end cursor-pointer" size={40} onClick={()=>regModalFunc()}/>
                         </div>
                     </motion.div>
                 )}

@@ -10,7 +10,10 @@ export default {
         mainBg:"#F4EEEA",
         primaryNavy:"#213F99",
         whiteTint:"#ffffff99",
-        creamColor: "#C9ABA7"
+        creamColor: "#C9ABA7",
+        scndCreamColor:"#dfcdc2",
+        scndryTextColor:"#ba948f",
+        expCardBg:"#e5e9f3"
       },
       fontFamily:{
         Oswald:['"Oswald"',"sans-serif"],
