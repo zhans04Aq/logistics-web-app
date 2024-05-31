@@ -13,7 +13,7 @@ const slides = [
     },
     {
         title: "Some Title",
-        text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore adipisci voluptatum sunt sequi, autem fugiat. Soluta praesentium inventore est saepe debitis adipisci quos deleniti, fugiat, incidunt aut mollitia corrupti laborum.",
+        text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore adipisci voluptatum sunt sequi, autem fugiat. Soluta praesentium inventore est saepe debitis adipisci quos deleniti, fugiat, incidunt авт mollitia corrupti laborum.",
         img: "https://orlando1464.hocoos.com/_ipx/f_webp,q_90/https://img2.hocoos.com/cache/img-pack/1324/w-1900/h-720/ww-1900/wh-720/img-pack/1324/pexels-laura-tancredi-7078717.jpg",
         slideDate: ""
     },
@@ -61,18 +61,13 @@ function HomePage() {
         }
     };
 
-    const urlToFetchFrom = ""
-
-    fetch(urlToFetchFrom)
-    .then(response => response.json())
-    .then((data) => {
-        console.log("Request made, and response received!");
-        console.log(data);
-    })
     return (
         <div className='w-full'>
-            <div className="flex flex-col items-center justify-center my-20 lg:h-full">
-                <div className="bg-firstSectionBg absolute top-16 left-0 bg-no-repeat bg-cover h-3/4 my-4">
+            <div className="flex flex-col items-center justify-center mt-20 lg:h-screen">
+                <div
+                    className="absolute top-16 left-0 w-full h-screen bg-no-repeat bg-cover my-4"
+                    style={{ backgroundImage: "url('https://orlando1464.hocoos.com/_ipx/f_webp,q_90/https://img2.hocoos.com/cache/img-pack/1324/w-1900/h-720/ww-1900/wh-720/img-pack/1324/clay-banks-xvs-ukuouao-unsplash.jpg')" }}
+                >
                     <div className="relative w-full h-full bg-whiteTint"></div>
                 </div>
                 <div className="flex flex-col items-center z-0 w-full justify-center my-14 space-y-10">
@@ -106,8 +101,8 @@ function HomePage() {
                         </div>
                     ))}
                 </div>
-                <div className='hidden lg:flex absolute justify-center items-center w-full h-2/4 px-5'>
-                    <div className='flex w-full justify-between'>
+                <div className='hidden lg:flex absolute justify-center items-center w-full h-3/4 px-5'>
+                    <div className='flex w-full justify-between '>
                         <button onClick={prevSlide} className='rounded-full bg-primaryNavy p-2'><FaAngleLeft size={30} color='white' /></button>
                         <button onClick={nextSlide} className='rounded-full bg-primaryNavy p-2'><FaAngleRight size={30} color='white' /></button>
                     </div>
@@ -125,7 +120,7 @@ function HomePage() {
                     <p className='mb-6'>
                         Свяжитесь с нами, когда у вас возникнут вопросы. Мы всегда здесь для тебя!
                     </p>
-                    <form className='w-full max-w-lg text-start'>
+                    <form className='w-5/6 xl:w-full max-w-lg text-start'>
                         <div className='flex flex-col md:flex-row md:space-x-4 mb-4'>
                             <div className='w-full'>
                                 <label htmlFor="fname" className='block text-sm font-medium'>Имя</label>

@@ -24,6 +24,9 @@ export default {
         svntScreenVh:"70vh",
         eghtScreenVh:"80vh",
         nintysxScreenVh:"96vh",
+      },
+      screens:{
+        xs:'425px'
       }
     },
   },

@@ -3,9 +3,8 @@
 
 #root {
   /* margin: 0 auto; */
-  padding: 1rem 0;
+  padding: 1rem 0 0;
   text-align: center;
-  overflow: hidden;
 }
 
 body{
@@ -14,4 +13,5 @@ body{
 
 .active{
   color: #213F99;
+  font-weight: 700;
 }
