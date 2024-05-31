@@ -1,6 +1,5 @@
 package com.example.logistics.controller
 
-import com.example.logistics.exception.CustomerNotFoundException
 import com.example.logistics.model.request.LoginRequest
 import com.example.logistics.model.request.RegisterRequest
 import com.example.logistics.service.AuthenticationService
@@ -8,6 +7,7 @@ import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("api/v1/auth")
+@CrossOrigin(origins = ["*"])
 class AuthenticationController(private val authenticationService: AuthenticationService) {
 
     @PostMapping("/register")
@@ -20,3 +20,14 @@ class AuthenticationController(private val authenticationService: Authentication
         return authenticationService.login(loginRequest.customerName, loginRequest.password)
     }
 }
+////
+//{
+//    "customerName": "John Doe",
+//    "customerPhone": "1234567890",
+//    "password": "password1231"
+//}
+//{
+//    "customerName": "Zholdaskali Erkebulan",
+//    "customerPhone": "87478408845",
+//    "password": "password1231"
+//}

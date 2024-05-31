@@ -1,7 +1,5 @@
-package com.example.logistics.model.request
+package com.example.logistics.model.data
 
 data class WarehouseData(
-    val id: Long,
-    val name: String,
-    val location: String
+    val id: Long
 )

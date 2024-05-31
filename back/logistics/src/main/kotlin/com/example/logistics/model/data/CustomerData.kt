@@ -1,7 +1,5 @@
-package com.example.logistics.model.request
+package com.example.logistics.model.data
 
 data class CustomerData(
-    val id: Long,
-    val name: String,
-    val email: String
+    val id: Long
 )

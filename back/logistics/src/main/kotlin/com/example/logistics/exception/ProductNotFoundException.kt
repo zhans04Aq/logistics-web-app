@@ -1,4 +1,3 @@
 package com.example.logistics.exception
 
-class ProductNotFoundExeption {
-}
+class ProductNotFoundException : RuntimeException("Product not found")

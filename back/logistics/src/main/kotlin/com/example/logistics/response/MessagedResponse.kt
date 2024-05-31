@@ -10,7 +10,6 @@ class MessagedResponse<T>(
         fun empty(message: String) = MessagedResponse(message = message, body = null)
 
         fun <T> of(body: T) = MessagedResponse(body = body, message = null)
-
     }
 
 }

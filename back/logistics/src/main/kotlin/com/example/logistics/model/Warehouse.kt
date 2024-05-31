@@ -13,5 +13,5 @@ data class Warehouse(
     val warehouseName: String,
 
     @Column(name = "warehouse_address", nullable = false)
-    val warehouseAddress: String
+    val  warehouseAddress: String
 )

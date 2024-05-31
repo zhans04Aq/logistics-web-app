@@ -14,10 +14,6 @@ data class Order(
     @JoinColumn(name = "customer_id", nullable = false)
     val customer: Customer,
 
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "product_id")
-    val product: Product?,
-
     @Column(name = "start_location")
     val startLocation: String?,
 

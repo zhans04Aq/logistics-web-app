@@ -3,17 +3,15 @@ package com.example.logistics.controller
 import com.example.logistics.model.Customer
 import com.example.logistics.response.MessagedResponse
 import com.example.logistics.service.CustomerService
-import org.springframework.web.bind.annotation.GetMapping
-import org.springframework.web.bind.annotation.PathVariable
-import org.springframework.web.bind.annotation.RequestMapping
-import org.springframework.web.bind.annotation.RestController
+import org.springframework.web.bind.annotation.*
 
 @RestController
 @RequestMapping("/api/v1/customers")
+@CrossOrigin(origins = ["*"])
 class CustomerController(
     private val customerService: CustomerService
 ) {
-    @GetMapping("/{custemerId}")
+    @GetMapping("/{customerId}")
     fun getCustomerById(
         @PathVariable customerId: Long
     ): MessagedResponse<Customer> {

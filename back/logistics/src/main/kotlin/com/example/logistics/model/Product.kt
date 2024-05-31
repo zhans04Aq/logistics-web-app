@@ -19,6 +19,14 @@ data class Product(
     @Column(name = "expiration_date", nullable = false)
     val expirationDate: LocalDate,
 
-    @Column(name = "quantity", nullable = false)
-    val quantity: Int
+    @Column(nullable = false)
+    val quantity: Int,
+
+    @ManyToOne
+    @JoinColumn(name = "warehouse_id", nullable = false)
+    val  warehouse: Warehouse,
+
+    @ManyToOne
+    @JoinColumn(name = "customers_id", nullable = false)
+    val  customer: Customer
 )
