@@ -117,7 +117,9 @@ const Layout = () => {
                                             {userId ? (
                                                 <>
                                                     <div className='flex flex-col items-center'>
-                                                        <RiLuggageCartFill to="/Cart" size={40} />
+                                                        <NavLink>
+                                                            <RiLuggageCartFill to="/Cart" size={40} />
+                                                        </NavLink>
                                                         <span>{customerName}</span>
                                                         <button onClick={logout} className="font-bold hover:text-primaryNavy ">Выйти</button>
                                                     </div>  
