@@ -1,25 +1,26 @@
 /* eslint-disable no-unused-vars */
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef  } from 'react';
 import { NavLink } from 'react-router-dom';
+import emailjs from '@emailjs/browser';
 import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
 
 const slides = [
     {
-        title: "Some Title",
-        text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore adipisci voluptatum sunt sequi, autem fugiat. Soluta praesentium inventore est saepe debitis adipisci quos deleniti, fugiat, incidunt aut mollitia corrupti laborum.",
+        title: "Расширение складских помещений",
+        text: "Наша логистическая компания с радостью объявляет о расширении наших складских помещений. Благодаря увеличенной вместимости мы сможем разместить больше товаров и обеспечить более быструю и эффективную обработку заказов для наших клиентов. Это расширение является подтверждением нашего стремления к удовлетворению растущих потребностей наших клиентов и обеспечению бесперебойной логистики.",
         img: "https://orlando1464.hocoos.com/_ipx/f_webp,q_90/https://img2.hocoos.com/cache/img-pack/1324/w-1900/h-720/ww-1900/wh-720/img-pack/1324/pexels-cottonbro-4046148.jpg",
         slideDate: ""
     },
     {
-        title: "Some Title",
-        text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore adipisci voluptatum sunt sequi, autem fugiat. Soluta praesentium inventore est saepe debitis adipisci quos deleniti, fugiat, incidunt авт mollitia corrupti laborum.",
+        title: "Введение экологически чистых транспортных средств для доставки",
+        text: "В рамках нашей постоянной работы по снижению углеродного следа, мы с гордостью представляем парк экологически чистых транспортных средств для доставки. Эти транспортные средства работают на электричестве или гибридной технологии, что значительно снижает выбросы и способствует устойчивому транспорту. Принятие этих экологически чистых транспортных средств является нашим вкладом в более зеленое будущее и предоставлением экологически осознанных логистических решений нашим клиентам.",
         img: "https://orlando1464.hocoos.com/_ipx/f_webp,q_90/https://img2.hocoos.com/cache/img-pack/1324/w-1900/h-720/ww-1900/wh-720/img-pack/1324/pexels-laura-tancredi-7078717.jpg",
         slideDate: ""
     },
     {
-        title: "Some Title",
-        text: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempore adipisci voluptatum sunt sequi, autem fugiat. Soluta praesentium inventore est saepe debitis adipisci quos deleniti, fugiat, incidunt aut mollitia corrupti laborum.",
+        title: "Новое партнерство для международных перевозок",
+        text: "Мы с радостью объявляем о нашем новом партнерстве с глобальным поставщиком услуг по международным перевозкам, расширяя наши возможности для международных перевозок. Это сотрудничество позволит нам проникнуть на новые рынки, улучшить нашу сеть перевозок и предложить конкурентные тарифы для международных отправлений. С данной партнерской программой мы стремимся предоставить комплексные логистические решения для бизнесов, желающих расширить свою деятельность на международном уровне.",
         img: "https://orlando1464.hocoos.com/_ipx/f_webp,q_90/https://img2.hocoos.com/cache/img-pack/1324/w-1900/h-720/ww-1900/wh-720/img-pack/1324/pexels-cottonbro-7437499.jpg",
         slideDate: ""
     },
@@ -29,6 +30,7 @@ function HomePage() {
     const [currentSlide, setCurrentSlide] = useState(0);
     const [startTouch, setStartTouch] = useState(0);
     const [endTouch, setEndTouch] = useState(0);
+    const form = useRef();
 
     useEffect(() => {
         const interval = setInterval(() => {
@@ -59,6 +61,22 @@ function HomePage() {
         } else if (startTouch - endTouch < -50) {
             prevSlide();
         }
+    };
+
+    const sendEmail = (e) => {
+        e.preventDefault();
+        emailjs
+        .sendForm('service_wwkh8un', 'template_38z8wfq', form.current, {
+            publicKey: 'ButAhbfR6s_QD-aJL',
+        })
+        .then(
+            () => {
+            console.log('SUCCESS!');
+            },
+            (error) => {
+            console.log('FAILED...', error.text);
+            },
+        );
     };
 
     return (
@@ -120,24 +138,24 @@ function HomePage() {
                     <p className='mb-6'>
                         Свяжитесь с нами, когда у вас возникнут вопросы. Мы всегда здесь для тебя!
                     </p>
-                    <form className='w-5/6 xl:w-full max-w-lg text-start'>
+                    <form ref={form} onSubmit={sendEmail} className='w-5/6 xl:w-full max-w-lg text-start'>
                         <div className='flex flex-col md:flex-row md:space-x-4 mb-4'>
                             <div className='w-full'>
                                 <label htmlFor="fname" className='block text-sm font-medium'>Имя</label>
-                                <input type="name" name='fname' className='mt-1 p-2 border border-gray-300 w-full' />
+                                <input type="name" name='user_fname' className='mt-1 p-2 border border-gray-300 w-full' />
                             </div>
                             <div className='w-full'>
                                 <label htmlFor="lname" className='block text-sm font-medium'>Фамилия</label>
-                                <input type="lastname" className='mt-1 p-2 border border-gray-300 w-full' />
+                                <input type="lastname" name='user_lname' className='mt-1 p-2 border border-gray-300 w-full' />
                             </div>  
                         </div>
                         <div className='mb-4'>
                             <label htmlFor="email" className='block text-sm font-medium'>Email</label>
-                            <input type="email" className='mt-1 p-2 border border-gray-300 w-full' />
+                            <input type="email" name='user_email' className='mt-1 p-2 border border-gray-300 w-full' />
                         </div>
                         <div className='mb-4'>
                             <label htmlFor="phone" className='block text-sm font-medium'>Телефон</label>
-                            <input type="phone" className='mt-1 p-2 border border-gray-300 w-full' />
+                            <input type="phone" name='user_phone_number' className='mt-1 p-2 border border-gray-300 w-full' />
                         </div>
                         <div className='mb-4'>
                             <label htmlFor="message" className='block text-sm font-medium'>Сообщение</label>
