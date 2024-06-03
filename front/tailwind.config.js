@@ -13,7 +13,9 @@ export default {
         creamColor: "#C9ABA7",
         scndCreamColor:"#dfcdc2",
         scndryTextColor:"#ba948f",
-        expCardBg:"#e5e9f3"
+        expCardBg:"#e5e9f3",
+        formBg:"#F4EEEA",
+        formText:"#B8918D",
       },
       fontFamily:{
         Oswald:['"Oswald"',"sans-serif"],

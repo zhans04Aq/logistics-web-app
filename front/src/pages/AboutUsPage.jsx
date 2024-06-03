@@ -1,4 +1,9 @@
+import { userId } from "../variables";
+
+
+
 function AboutUsPage() {
+    console.log(userId)
     return (
         <>
             <div className="relative w-full h-auto">
@@ -26,10 +31,10 @@ function AboutUsPage() {
 
             <div className="h-auto">
                 <img src="https://img2.hocoos.com/cache/img-pack/1324/w-1920/h-366/ww-1920/wh-366/img-pack/1324/luca-bravo-als7ewq41m8-unsplash.jpg" alt="" className="w-full"/>
-                <div className="flex flex-col gap-y-10 py-10">
-                    <h1 className="text-primaryNavy text-3xl font-semibold">Нащи Результаты</h1>
-                    <p className="text-sm">Мы гордимся тем, чего мы достигли, но на этом мы не останавливаемся.</p>
-                    <div className="flex text-primaryNavy flex-col lg:flex-row font-semibold items-center px-5 gap-y-5 gap-x-10">
+                <div className="flex flex-col gap-y-10 py-10 px-10">
+                    <h1 className="text-primaryNavy text-5xl font-semibold">Наши Результаты</h1>
+                    <p className="text-2xl">Мы гордимся тем, чего мы достигли, но на этом мы не останавливаемся.</p>
+                    <div className="flex text-primaryNavy flex-col lg:flex-row font-semibold items-center gap-y-5 gap-x-10">
                         <div className="text-center bg-expCardBg w-full px-10 py-8">
                             <h1 className="text-4xl">5</h1>
                             <p className="text-2xl">лет опыта</p>
@@ -47,9 +52,9 @@ function AboutUsPage() {
             </div>
             <div className="bg-scndCreamColor h-auto px-5 py-10">
                 <div className="max-w-7xl minh min-h-96 text-start flex flex-col justify-center items-start gap-y-5 mx-auto">
-                    <h2 className="text-scndryTextColor">Повышение производительности и удовлетворенности клиентов</h2>
-                    <h1 className="text-primaryNavy text-3xl font-semibold">Преимущества наших логистических услуг</h1>
-                    <div className="text-sm flex flex-col lg:flex-row gap-y-5 gap-x-20">
+                    <h2 className="text-scndryTextColor lg:text-xl">Повышение производительности и удовлетворенности клиентов</h2>
+                    <h1 className="text-primaryNavy text-3xl lg:text-5xl font-semibold">Преимущества наших логистических услуг</h1>
+                    <div className="text-sm flex flex-col lg:flex-row gap-y-5 gap-x-20 lg:text-xl">
                         <p > Наши логистические услуги в городе Алматы разработаны для предоставления комплексных решений, которые оптимизируют ваши бизнес-процессы. Используя современные технологии, мы предлагаем разнообразные функции, которые помогут вам повысить производительность и удовлетворенность клиентов. Благодаря нашей удобной платформе управление вашими логистическими проектами становится проще и быстрее, чем когда-либо прежде. А благодаря неограниченной масштабируемости вы можете развернуть одно и то же решение в нескольких местах, не беспокоясь о совместимости или проблемах с производительностью. Готовьтесь ощутить новый уровень эффективности с нашими первоклассными логистическими услугами в Алматы!</p>
                         <p > Наши логистические услуги в городе Алматы разработаны для предоставления комплексных решений, которые оптимизируют ваши бизнес-процессы. Используя современные технологии, мы предлагаем разнообразные функции, которые помогут вам повысить производительность и удовлетворенность клиентов. Благодаря нашей удобной платформе управление вашими логистическими проектами становится проще и быстрее, чем когда-либо прежде. А благодаря неограниченной масштабируемости вы можете развернуть одно и то же решение в нескольких местах, не беспокоясь о совместимости или проблемах с производительностью. Готовьтесь ощутить новый уровень эффективности с нашими первоклассными логистическими услугами в Алматы!</p>
                     </div>
