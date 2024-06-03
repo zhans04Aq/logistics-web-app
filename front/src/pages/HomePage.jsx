@@ -71,13 +71,13 @@ function HomePage() {
                     <div className="relative w-full h-full bg-whiteTint"></div>
                 </div>
                 <div className="flex flex-col items-center z-0 w-full justify-center my-14 space-y-10">
-                    <h1 className="text-primaryNavy text-3xl font-normal font-Oswald lg:text-6xl">Almaty Logistics: Превосходство в сфере транспортных услуг</h1>
-                    <p className="font-Quicksand text-sm lg:text-lg">
+                    <h1 className="text-primaryNavy text-3xl font-normal font-Oswald lg:text-6xl text-center">Almaty Logistics: Превосходство в сфере транспортных услуг</h1>
+                    <p className="font-Quicksand text-sm lg:text-lg text-center">
                         Откройте для себя стремление Almaty Logistics к эффективности, надежности и удовлетворенности клиентов в наших услугах.
                     </p>
-                    <div className="flex w-2/3 flex-col items-center lg:flex-row lg:w-1/3 gap-3">
-                        <NavLink to='/About' className="bg-primaryNavy w-full lg:w-1/2 py-2 my-1 font-bold font-Quicksand text-white border border-primaryNavy">УЗНАТЬ БОЛЬШЕ</NavLink>
-                        <NavLink to='/Services' className="border-solid border-primaryNavy w-full lg:w-1/2 py-2 border my-1 text-primaryNavy font-semibold">ЗАКАЗАТЬ СЕЙЧАС</NavLink>
+                    <div className="flex w-2/3 flex-col items-center lg:flex-row lg:w-1/3 text-center gap-3">
+                        <NavLink to='/About' className="bg-primaryNavy w-full lg:w-1/2 rounded py-2 my-1 font-bold font-Quicksand text-white border border-primaryNavy">УЗНАТЬ БОЛЬШЕ</NavLink>
+                        <NavLink to='/Services' className="border-solid rounded border-primaryNavy w-full lg:w-1/2 py-2 border my-1 text-primaryNavy font-semibold">ЗАКАЗАТЬ СЕЙЧАС</NavLink>
                     </div>
                 </div>
             </div>
