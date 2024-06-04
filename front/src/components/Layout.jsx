@@ -110,15 +110,15 @@ const Layout = () => {
                                         <IoIosClose size={40} onClick={toggleMenu} />
                                     </div>
                                     <div className="flex flex-col items-center">
-                                        <NavLink to="/">Главная</NavLink>
-                                        <NavLink to="/About">О нас</NavLink>
-                                        <NavLink to="/Services">Сервисы</NavLink>
+                                        <NavLink to="/" onClick={toggleMenu}>Главная</NavLink>
+                                        <NavLink to="/About" onClick={toggleMenu}>О нас</NavLink>
+                                        <NavLink to="/Services" onClick={toggleMenu}>Сервисы</NavLink>
                                         <div className="flex flex-col gap-3 text-md items-center my-10">
                                             {userId ? (
                                                 <>
                                                     <div className='flex flex-col items-center'>
-                                                        <NavLink>
-                                                            <RiLuggageCartFill to="/Cart" size={40} />
+                                                        <NavLink to="/Cart" onClick={toggleMenu}>
+                                                            <RiLuggageCartFill  size={40} />
                                                         </NavLink>
                                                         <span>{customerName}</span>
                                                         <button onClick={logout} className="font-bold hover:text-primaryNavy ">Выйти</button>
